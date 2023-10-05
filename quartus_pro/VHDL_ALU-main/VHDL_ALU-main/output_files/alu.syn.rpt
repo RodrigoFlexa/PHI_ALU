@@ -1,0 +1,459 @@
+Synthesis report
+Thu Oct  5 13:39:19 2023
+Quartus Prime Version 23.3.0 Build 104 09/20/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Synthesis Summary
+  2. Synthesis Settings
+  3. Synthesis Source Files Read
+  4. Synthesis Partition Summary
+  5. Parameter Settings for User Entity soma Instance: inst_soma
+  6. Parameter Settings for User Entity subtracao Instance: inst_sub
+  7. Parameter Settings for User Entity and_gate Instance: inst_and
+  8. Parameter Settings for User Entity or_gate Instance: inst_or
+  9. Parameter Settings for User Entity not_gate Instance: inst_not
+ 10. Parameter Settings for User Entity shift_esquerda Instance: inst_esq
+ 11. Parameter Settings for User Entity shift_direita Instance: inst_dir
+ 12. Parameter Settings for User Entity incremento Instance: inst_inc
+ 13. Parameter Settings for User Entity decremento Instance: inst_dec
+ 14. Parameter Settings for User Entity display Instance: inst_display
+ 15. Partition "root_partition" Resource Utilization by Entity
+ 16. General Register Statistics for Partition "root_partition"
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Preserve for Debug Assignments for Partition "root_partition"
+ 19. Post-Synthesis Netlist Statistics for Partition "root_partition"
+ 20. Synthesis Resource Usage Summary for Partition "root_partition"
+ 21. Top Causes of Logic Optimized Away During Sweep
+ 22. Synthesis Messages
+
+
+
++---------------------------------------------------------------+
+; Synthesis Summary                                             ;
++-----------------------+---------------------------------------+
+; Synthesis Status      ; Successful - Thu Oct  5 13:39:19 2023 ;
+; Revision Name         ; alu                                   ;
+; Top-level Entity Name ; alu                                   ;
+; Family                ; Cyclone 10 GX                         ;
++-----------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Synthesis Settings                                                                                                                  ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+; Option                                                                          ; Setting                 ; Default Value           ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+; Device                                                                          ; 10CX220YF780I5G         ;                         ;
+; Top-level entity name                                                           ; alu                     ; alu                     ;
+; Family name                                                                     ; Cyclone 10 GX           ; Cyclone V               ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                      ; On                      ;
+; Enable compact report table                                                     ; Off                     ; Off                     ;
+; Design Assistant include IP blocks                                              ; Off                     ; Off                     ;
+; High fanout net threshold for RAM inference                                     ; 15                      ; 15                      ;
+; Design Assistant limit on reported violations per rule                          ; 5000                    ; 5000                    ;
+; Optimization Mode                                                               ; Balanced                ; Balanced                ;
+; Allow Register Merging                                                          ; On                      ; On                      ;
+; Allow Register Duplication                                                      ; On                      ; On                      ;
+; Allow Register Retiming                                                         ; On                      ; On                      ;
+; Allow RAM Retiming                                                              ; Off                     ; Off                     ;
+; Allow DSP Retiming                                                              ; Off                     ; Off                     ;
+; Use Checkered Pattern as Uninitialized RAM Content                              ; Off                     ; Off                     ;
+; Restructure Multiplexers                                                        ; Auto                    ; Auto                    ;
+; Waive gated clock synchronizer check                                            ; On                      ; On                      ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                     ; Off                     ;
+; Preserve fewer node names                                                       ; On                      ; On                      ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable                  ; Enable                  ;
+; Verilog Version                                                                 ; Verilog_2001            ; Verilog_2001            ;
+; VHDL Version                                                                    ; VHDL_1993               ; VHDL_1993               ;
+; State Machine Processing                                                        ; Auto                    ; Auto                    ;
+; Safe State Machine                                                              ; Auto                    ; Auto                    ;
+; Iteration limit for constant Verilog loops                                      ; 5000                    ; 5000                    ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                     ; 250                     ;
+; Infer RAMs from Raw Logic                                                       ; On                      ; On                      ;
+; DSP Block Balancing                                                             ; Auto                    ; Auto                    ;
+; NOT Gate Push-Back                                                              ; On                      ; On                      ;
+; Power-Up Don't Care                                                             ; On                      ; On                      ;
+; Remove Redundant Logic Cells                                                    ; Off                     ; Off                     ;
+; Remove Duplicate Registers                                                      ; On                      ; On                      ;
+; Ignore GLOBAL Buffers                                                           ; Off                     ; Off                     ;
+; Ignore LCELL Buffers                                                            ; Off                     ; Off                     ;
+; Ignore SOFT Buffers                                                             ; On                      ; On                      ;
+; Optimization Technique                                                          ; Balanced                ; Balanced                ;
+; Auto Open-Drain Pins                                                            ; On                      ; On                      ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                     ; Off                     ;
+; Auto ROM Replacement                                                            ; On                      ; On                      ;
+; Auto RAM Replacement                                                            ; On                      ; On                      ;
+; Auto DSP Block Replacement                                                      ; On                      ; On                      ;
+; Auto Shift Register Replacement                                                 ; Auto                    ; Auto                    ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                    ; Auto                    ;
+; Auto Clock Enable Replacement                                                   ; On                      ; On                      ;
+; Strict RAM Replacement                                                          ; Off                     ; Off                     ;
+; Allow Synchronous Control Signals                                               ; On                      ; On                      ;
+; Force Use of Synchronous Clear Signals                                          ; Off                     ; Off                     ;
+; Auto Resource Sharing                                                           ; Off                     ; Off                     ;
+; Allow Any RAM Size For Recognition                                              ; Off                     ; Off                     ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                     ; Off                     ;
+; Ignore translate_off and synthesis_off directives                               ; Off                     ; Off                     ;
+; Timing-Driven Synthesis                                                         ; On                      ; On                      ;
+; Report Propagation of Constraints                                               ; On                      ; On                      ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                     ; Off                     ;
+; Synchronization Register Chain Length                                           ; 3                       ; 3                       ;
+; Power Optimization During Synthesis                                             ; Normal compilation      ; Normal compilation      ;
+; HDL message level                                                               ; Level2                  ; Level2                  ;
+; Number of Protected Registers Reported in Synthesis Report                      ; 100                     ; 100                     ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                    ; 5000                    ;
+; Number of Optimized Away Hierarchies Reported in Synthesis Report               ; 100                     ; 100                     ;
+; Group Identical Hierarchies in Optimized Away Hierarchies Report                ; On                      ; On                      ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                    ; 5000                    ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                     ; 100                     ;
+; Clock MUX Protection                                                            ; On                      ; On                      ;
+; Auto Gated Clock Conversion                                                     ; Off                     ; Off                     ;
+; Block Design Naming                                                             ; Auto                    ; Auto                    ;
+; SDC constraint protection                                                       ; Off                     ; Off                     ;
+; Optimization and Constraint Precedence                                          ; Prioritize Optimization ; Prioritize Optimization ;
+; Synthesis Effort                                                                ; Auto                    ; Auto                    ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                      ; On                      ;
+; Analysis & Synthesis Message Level                                              ; Medium                  ; Medium                  ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                    ; Auto                    ;
+; Resource Aware Inference For Block RAM                                          ; On                      ; On                      ;
+; Automatic Parallel Synthesis                                                    ; On                      ; On                      ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                     ; Off                     ;
+; Disable DSP Negate Inferencing                                                  ; Off                     ; Off                     ;
+; Report Parameter Settings                                                       ; On                      ; On                      ;
+; Report Parameter Settings to ASCII                                              ; On                      ; On                      ;
+; Report Source Assignments                                                       ; On                      ; On                      ;
+; Report Source Assignments to ASCII                                              ; On                      ; On                      ;
+; Report Resource Utilization by Entity to ASCII                                  ; On                      ; On                      ;
+; Size of the Latch Report                                                        ; 100                     ; 100                     ;
+; Enable VHDL static assertion support                                            ; Off                     ; Off                     ;
+; Enable SystemVerilog static assertion support                                   ; Off                     ; Off                     ;
+; Enable State Machines Inference                                                 ; Off                     ; Off                     ;
+; Allow RAMs Inferred In Generate-For Loop For Verilog                            ; Off                     ; Off                     ;
+; Enable formal verification support during compilation                           ; Off                     ; Off                     ;
+; Size of the PR Initial Conditions Report                                        ; 100                     ; 100                     ;
+; Number of Registers with Ignored Power-Up Settings Reported in Synthesis Report ; 500                     ; 500                     ;
+; Report PR Initial Values as Errors                                              ; Off                     ; Off                     ;
+; Fractal Synthesis                                                               ; Off                     ; Off                     ;
+; Synthesis Available Resource Multiplier                                         ; 1                       ; 1                       ;
+; Message Level for Unconnected Output Ports                                      ; Warning                 ; Warning                 ;
+; Pack Barrelshifters into Carry Chains for Better Area                           ; Auto                    ; Auto                    ;
+; Initialize Verilog enums to X                                                   ; Off                     ; Off                     ;
+; Enable dynamic report                                                           ; Off                     ; Off                     ;
+; Show Collapsible Rows in Ascii Report for Warning Summary Reports               ; On                      ; On                      ;
+; Enable preserve for debug assignments                                           ; Off                     ; Off                     ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Synthesis Source Files Read                                                                                                                                                                                                  ;
++----------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+---------+-----------+----------------------------------+
+; File Name with User-Entered Path ; File Type                 ; File Name with Absolute Path                                                                         ; Library ; IP Source ; MD5                              ;
++----------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+---------+-----------+----------------------------------+
+; alu.vhd                          ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/alu.vhd            ;         ;           ; 16c8b17dd1d28ac55648a183ecab70cb ;
+; soma.vhd                         ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/soma.vhd           ;         ;           ; 91fa75aa3171d2784569900c362b2b6e ;
+; subtracao.vhd                    ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/subtracao.vhd      ;         ;           ; 96ed93f880daeb9f6eaa093b4a242b1e ;
+; and_gate.vhd                     ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/and_gate.vhd       ;         ;           ; ae14d2034bc58683659521aad41e15ce ;
+; or_gate.vhd                      ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/or_gate.vhd        ;         ;           ; 267798ef1e371dc126f3368763033b62 ;
+; not_gate.vhd                     ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/not_gate.vhd       ;         ;           ; a66b78c02b2292f852f031021fba2b29 ;
+; shift_esquerda.vhd               ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/shift_esquerda.vhd ;         ;           ; b2529ec278af0bc641ad8864fbaa832a ;
+; shift_direita.vhd                ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/shift_direita.vhd  ;         ;           ; 2703caebfd859bb9f7c02e4e5823823d ;
+; mux.vhd                          ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/mux.vhd            ;         ;           ; 9614da336edc424b10b08034129ed132 ;
+; incremento.vhd                   ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/incremento.vhd     ;         ;           ; 8af3760d894408d19d909bd7b78602c3 ;
+; decremento.vhd                   ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/decremento.vhd     ;         ;           ; d778127e29a656fded7e9fe0264d61e7 ;
+; display.vhd                      ; User-Specified VHDL File  ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/display.vhd        ;         ;           ; 764cc33157f14cc46a7f6308f2d88f43 ;
++----------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+---------+-----------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Synthesis Partition Summary                                                                ;
++----------------+----------------+---------+--------------+-------+-------------------------+
+; Partition Name ; Hierarchy Path ; Type    ; Preservation ; Empty ; Partition Database File ;
++----------------+----------------+---------+--------------+-------+-------------------------+
+; root_partition ; |              ; Default ;              ;       ;                         ;
++----------------+----------------+---------+--------------+-------+-------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity soma Instance: inst_soma ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; nbits          ; 4     ; Untyped                            ;
++----------------+-------+------------------------------------+
+All Instances:
+inst_soma
+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity subtracao Instance: inst_sub ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; nbits          ; 4     ; Untyped                                ;
++----------------+-------+----------------------------------------+
+All Instances:
+inst_sub
+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity and_gate Instance: inst_and ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; nbits          ; 4     ; Untyped                               ;
++----------------+-------+---------------------------------------+
+All Instances:
+inst_and
+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity or_gate Instance: inst_or ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; nbits          ; 4     ; Untyped                             ;
++----------------+-------+-------------------------------------+
+All Instances:
+inst_or
+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity not_gate Instance: inst_not ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; nbits          ; 4     ; Untyped                               ;
++----------------+-------+---------------------------------------+
+All Instances:
+inst_not
+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity shift_esquerda Instance: inst_esq ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; nbits          ; 4     ; Untyped                                     ;
+; shift          ; 1     ; Untyped                                     ;
++----------------+-------+---------------------------------------------+
+All Instances:
+inst_esq
+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity shift_direita Instance: inst_dir ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nbits          ; 4     ; Untyped                                    ;
+; shift          ; 1     ; Untyped                                    ;
++----------------+-------+--------------------------------------------+
+All Instances:
+inst_dir
+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity incremento Instance: inst_inc ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; nbits          ; 4     ; Untyped                                 ;
++----------------+-------+-----------------------------------------+
+All Instances:
+inst_inc
+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity decremento Instance: inst_dec ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; nbits          ; 4     ; Untyped                                 ;
++----------------+-------+-----------------------------------------+
+All Instances:
+inst_dec
+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity display Instance: inst_display ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; nbits          ; 4     ; Untyped                                  ;
++----------------+-------+------------------------------------------+
+All Instances:
+inst_display
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition "root_partition" Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; IOPLLs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------+---------------------+-------------+--------------+
+; |                          ; 43 (0)              ; 0 (0)                     ; 0                 ; 0          ; 19   ; 0            ; 0 (0)  ; |                   ; alu         ; altera_work  ;
+;    |inst_display|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; 0 (0)  ; inst_display        ; display     ; altera_work  ;
+;    |inst_mux|              ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; 0 (0)  ; inst_mux            ; mux         ; altera_work  ;
+;    |inst_soma|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; 0 (0)  ; inst_soma           ; soma        ; altera_work  ;
+;    |inst_sub|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; 0 (0)  ; inst_sub            ; subtracao   ; altera_work  ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; General Register Statistics for Partition "root_partition" ;
++----------------------------------------------+-------------+
+; Statistic                                    ; Value       ;
++----------------------------------------------+-------------+
+; Total registers                              ; 0           ;
+; Number of registers using Synchronous Clear  ; 0           ;
+; Number of registers using Synchronous Load   ; 0           ;
+; Number of registers using Asynchronous Clear ; 0           ;
+; Number of registers using Asynchronous Load  ; 0           ;
+; Number of registers using Clock Enable       ; 0           ;
+; Number of registers using Preset             ; 0           ;
++----------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+-------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ; Restructuring Performed ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+-------------------------+
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; inst_mux|Mux_1             ; Yes                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+-------------------------+
+
+
++---------------------------------------------------------------+
+; Preserve for Debug Assignments for Partition "root_partition" ;
++------+--------+-----------------------------------------------+
+; Name ; Status ; Notes                                         ;
++------+--------+-----------------------------------------------+
+Notes: Table created because there is an active PRESERVE_FOR_DEBUG_ENABLE in the project, even though there are no tagged names within the partition.
+
+
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition "root_partition" ;
++------------------------+-----------------------------------------+
+; Type                   ; Count                                   ;
++------------------------+-----------------------------------------+
+; boundary_port          ; 19                                      ;
+; cyclone10gx_lcell_comb ; 43                                      ;
+;     arith              ; 4                                       ;
+;         2 data inputs  ; 4                                       ;
+;     extend             ; 2                                       ;
+;         7 data inputs  ; 2                                       ;
+;     normal             ; 33                                      ;
+;         3 data inputs  ; 5                                       ;
+;         4 data inputs  ; 15                                      ;
+;         5 data inputs  ; 3                                       ;
+;         6 data inputs  ; 10                                      ;
+;     shared             ; 4                                       ;
+;         2 data inputs  ; 4                                       ;
+;                        ;                                         ;
+; Number of carry chains ; 2                                       ;
+; Max carry chain length ; 4                                       ;
+;                        ;                                         ;
+; Max LUT depth          ; 5.30                                    ;
+; Average LUT depth      ; 4.54                                    ;
++------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Synthesis Resource Usage Summary for Partition "root_partition" ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimate of Logic utilization (ALMs needed) ; 28                ;
+;                                             ;                   ;
+; Combinational ALUT usage for logic          ; 43                ;
+;     -- 7 input functions                    ; 2                 ;
+;     -- 6 input functions                    ; 10                ;
+;     -- 5 input functions                    ; 3                 ;
+;     -- 4 input functions                    ; 15                ;
+;     -- <=3 input functions                  ; 13                ;
+;                                             ;                   ;
+; Dedicated logic registers                   ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 19                ;
+;                                             ;                   ;
+; Total DSP Blocks                            ; 0                 ;
+;     -- [A] Total Fixed Point DSP Blocks     ; 0                 ;
+;     -- [B] Total Floating Point DSP Blocks  ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; sel[0]            ;
+; Maximum fan-out                             ; 15                ;
+; Total fan-out                               ; 193               ;
+; Average fan-out                             ; 3.11              ;
++---------------------------------------------+-------------------+
+
+
+Top root causes of logic optimization that have been identified during sweep. Go to the " Root Causes Tab " in the " Sweep Hints Viewer " tool in the " RTL Analyzer " for more details and filtering options.
++------------------------------------------------------------------------------+
+; Top Causes of Logic Optimized Away During Sweep                              ;
++-----------------------+------------------+-------------+---------------------+
+; Root Object Path      ; Root Object Type ; Root Reason ; Swept Objects Count ;
++-----------------------+------------------+-------------+---------------------+
+; inst_dir|resultado[3] ; OUTPUT_PORT      ; stuck at 0  ; 2                   ;
+; inst_esq|resultado[0] ; OUTPUT_PORT      ; stuck at 0  ; 2                   ;
++-----------------------+------------------+-------------+---------------------+
+
+
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Synthesis
+    Info: Version 23.3.0 Build 104 09/20/2023 SC Pro Edition
+    Info: Processing started: Thu Oct  5 13:39:12 2023
+    Info: System process ID: 12080
+Info: Command: quartus_syn --dni --read_settings_files=on --write_settings_files=off alu -c alu
+Info: The application is running in 'DNI' mode.
+Info: qis_default_flow_script.tcl version: #3
+Info: Initializing Synthesis in DNI mode...
+Info: Project = "alu"
+Info: Revision = "alu"
+Info (21958): Initialized Quartus Message Database
+Info: Analyzing source files
+Info: Elaborating from top-level entity "alu"
+Info (19337): VHDL info at alu.vhd(5): executing entity "alu" with architecture "rtl" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/alu.vhd Line: 5
+Info (19337): VHDL info at soma.vhd(5): executing entity "soma" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/soma.vhd Line: 5
+Info (19337): VHDL info at subtracao.vhd(5): executing entity "subtracao" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/subtracao.vhd Line: 5
+Info (19337): VHDL info at and_gate.vhd(7): executing entity "and_gate" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/and_gate.vhd Line: 7
+Info (19337): VHDL info at or_gate.vhd(7): executing entity "or_gate" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/or_gate.vhd Line: 7
+Info (19337): VHDL info at not_gate.vhd(7): executing entity "not_gate" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/not_gate.vhd Line: 7
+Info (19337): VHDL info at shift_esquerda.vhd(5): executing entity "shift_esquerda" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/shift_esquerda.vhd Line: 5
+Info (19337): VHDL info at shift_direita.vhd(5): executing entity "shift_direita" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/shift_direita.vhd Line: 5
+Info (19337): VHDL info at incremento.vhd(7): executing entity "incremento" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/incremento.vhd Line: 7
+Info (19337): VHDL info at decremento.vhd(7): executing entity "decremento" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/decremento.vhd Line: 7
+Info (19337): VHDL info at mux.vhd(5): executing entity "mux" with architecture "Behavioral" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/mux.vhd Line: 5
+Info (19337): VHDL info at display.vhd(5): executing entity "display" with architecture "comportamento" File: C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/display.vhd Line: 5
+Info: Found 12 design entities
+Info: There are 12 partitions after elaboration.
+Info: Synthesizing partition "root_partition"
+Info (286030): Timing-Driven Synthesis is running
+Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 43 logic cells
+Info: Successfully synthesized partition
+Info: Saving post-synthesis snapshots for 1 partition(s)
+Info: Quartus Prime Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 617 megabytes
+    Info: Processing ended: Thu Oct  5 13:39:19 2023
+    Info: Elapsed time: 00:00:07
+    Info: System process ID: 12080
+
+

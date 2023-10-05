@@ -1,0 +1,69 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use std.textio.all;
+
+entity testbench is
+end testbench;
+
+architecture test of testbench is
+    component alu is
+        port (
+            A   : in  std_logic_vector(31 downto 0); -- 32 bits
+            B   : in  std_logic_vector(31 downto 0); -- 32 bits
+            y   : out std_logic_vector(31 downto 0); -- 32 bits
+            sel : in  std_logic_vector(3 downto 0)    -- 4 bits
+        );
+    end component;
+
+    signal input_a, input_b, resultado : std_logic_vector(31 downto 0) := (others => '0'); -- Initialize to zero
+    signal sel_mux : std_logic_vector(3 downto 0) := "0000"; -- Initialize with an appropriate value
+    signal clock : std_logic := '0';
+
+    file input_file: TEXT open READ_MODE is "entradas.txt"; -- Change the file path as needed
+    file output_file: TEXT open WRITE_MODE is "saidas.txt"; -- Change the file path as needed
+sim:/testbench/input_a sim:/testbench/input_b sim:/testbench/resultado sim:/testbench/sel_mux sim:/testbench/clock sim:/testbench/dut sim:/testbench/line__36 sim:/testbench/line__36/L sim:/testbench/line__36/entrada sim:/testbench/line__58 sim:/testbench/line__58/L sim:/testbench/line__68
+begin
+    dut: alu
+    port map(
+        A   => input_a,
+        B   => input_b,
+        sel => sel_mux,
+        y   => resultado
+    );
+
+    process
+        variable L: LINE;
+        variable entrada : integer;
+    begin
+        while not endfile(input_file) loop
+            readline(input_file, L);
+            read(L, entrada);
+            input_a <= std_logic_vector(to_unsigned(entrada, 32));
+
+            readline(input_file, L);
+            read(L, entrada);
+            input_b <= std_logic_vector(to_unsigned(entrada, 32));
+
+            readline(input_file, L);
+            read(L, entrada);
+            sel_mux <= std_logic_vector(to_unsigned(entrada, 4)); -- Change the variable name if needed
+
+            wait for 5 ns; -- Wait before changing values again
+        end loop;
+        wait;
+    end process;
+
+    process
+        variable L: LINE;
+    begin
+        wait for 1 ns; -- Wait to start writing to the file
+        while true loop
+            wait until rising_edge(clock);
+            write(L, to_integer(unsigned(resultado)));
+            writeline(output_file, L);
+        end loop;
+    end process;
+
+    clock <= not clock after 2.5 ns; -- Adjust the clock period as needed
+end test;

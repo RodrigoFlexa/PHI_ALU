@@ -1,0 +1,97 @@
+Flow report for alu
+Thu Oct  5 13:39:19 2023
+Quartus Prime Version 23.3.0 Build 104 09/20/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------+
+; Flow Summary                                        ;
++-------------+---------------------------------------+
+; Flow Status ; Successful - Thu Oct  5 13:39:19 2023 ;
++-------------+---------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/05/2023 13:39:12 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; alu                 ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                ;
++---------------------------------+------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                 ; Value                                                                                          ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------+------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID           ; 237901788777555.169652395412080                                                                ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT          ; Verilog Hdl                                                                                    ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL             ; Questa Intel FPGA (Verilog)                                                                    ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                  ; 1 ps                                                                                           ; --            ; --          ; eda_simulation ;
+; INCREMENTAL_VECTOR_INPUT_SOURCE ; C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/Waveform1.vwf                             ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY        ; C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/output_files ; --            ; --          ; --             ;
+; SIMULATION_MODE                 ; Functional                                                                                     ; Timing        ; --          ; --             ;
++---------------------------------+------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++--------------------------------------------------+
+; Flow Elapsed Time                                ;
++-------------+--------------+---------------------+
+; Module Name ; Elapsed Time ; Peak Virtual Memory ;
++-------------+--------------+---------------------+
+; Synthesis   ; 00:00:07     ; 617 MB              ;
+; Total       ; 00:00:07     ; --                  ;
++-------------+--------------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Flow OS Summary                                                           ;
++-------------+------------------+------------+------------+----------------+
+; Module Name ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-------------+------------------+------------+------------+----------------+
+; Synthesis   ; DESKTOP-IHF2BBQ  ; Windows 11 ; 10.0.22621 ; x86_64         ;
++-------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --dni --read_settings_files=on --write_settings_files=off alu -c alu
+
+
+

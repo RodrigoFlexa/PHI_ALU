@@ -1,0 +1,19 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity shift_esquerda is
+	generic(
+		nbits : integer := 4;
+		shift : integer := 1
+	);
+	port(
+		op_a, op_b : in std_logic_vector(nbits-1 downto 0);
+		resultado : out std_logic_vector(nbits-1 downto 0)
+	);
+end shift_esquerda;
+
+architecture comportamento of shift_esquerda is
+begin
+	resultado <= std_logic_vector(shift_left(unsigned(op_a), shift));
+end comportamento;

@@ -1,0 +1,9 @@
+8 (Resultado da Soma)
+3 (Resultado da subtração)
+0 (Resultado do And)
+7 (Resultado do OR)
+-8 (Resultado do Not)(1000) --> O Not no vhdl converte inclusive o bit do sinal
+12 (Resultado do SLL) (1100)
+6 (Resultado do SRL) (0110)
+9 (Resultado do inc)
+7 (Resultado do Dec)

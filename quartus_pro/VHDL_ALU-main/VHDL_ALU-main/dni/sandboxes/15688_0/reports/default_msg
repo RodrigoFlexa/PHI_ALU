@@ -1,0 +1,5 @@
+{ "Info" "IDMS_INIT_MSG_DB" "" "Initialized Quartus Message Database" {  } {  } 0 21958 "Initialized Quartus Message Database" 0 0 "Design Software" 0 -1 0 ""}
+{ "Info" "0" "" "Analyzing source files" {  } {  } 0 0 "Analyzing source files" 0 0 "0" 0 0 1696523077222 ""}
+{ "Info" "0" "" "Elaborating from top-level entity \"alu\"" {  } {  } 0 0 "Elaborating from top-level entity \"alu\"" 0 0 "0" 0 0 1696523077667 ""}
+{ "Error" "EVRFX2_VHDL_EXPR_ELEMENT_NUMBER_MISMATCH" "7 4 alu.vhd(113) " "VHDL expression error at alu.vhd(113): expression has 7 elements, but must have 4 elements" {  } { { "C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/alu.vhd" "" { Text "C:/Users/Demop/OneDrive/Documentos/Sexto_Semestre/PHI/VHDL_ALU-main/VHDL_ALU-main/alu.vhd" 113 0 0 0 } }  } 0 13657 "VHDL expression error at %3!s!: expression has %1!d! elements, but must have %2!d! elements" 0 0 "Design Software" 0 -1 1696523077677 ""}
+{ "Error" "0" "" "Failed to elaborate design: " {  } {  } 0 0 "Failed to elaborate design: " 0 0 "0" 0 0 1696523077698 ""}

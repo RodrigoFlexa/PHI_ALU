@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<internal_error>
+	<sub_system>ERR</sub_system>
+	<callstack>	0x7ff9632d49fb: Qt5Core + 0x1f49fb (??1QObject@@UEAA@XZ + 0x32b)
+	0x7ff9636d0c1e: Qt5Gui + 0x20c1e (??8@YA_NAEBUState@QAccessible@@0@Z + 0x41e)
+	0x7ff9636d4caa: Qt5Gui + 0x24caa (?acquireId@QAccessibleCache@@AEBAIXZ + 0xaa)
+	0x7ff9632b50c4: Qt5Core + 0x1d50c4 (?qt_call_post_routines@@YAXXZ + 0x134)
+	0x7ff963f0d2cb: Qt5Widgets + 0xd2cb (??1QApplication@@UEAA@XZ + 0x2b)
+	0x7ff6ee4e2cac: quartus + 0x2cac (?qgq_main@@YAHHPEAPEBD@Z + 0xbc)
+	0x7ff96f5c7f08: ccl_msg + 0x27f08 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)
+	0x7ff96f5c8ec2: ccl_msg + 0x28ec2 (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x82)
+	0x7ff98d94c323: ccl_mem + 0x2c323 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x73)
+	0x7ff96f5c5b65: ccl_msg + 0x25b65 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0x175)
+	0x7ff6ee4e4486: quartus + 0x4486 (WinMain + 0x156)
+	0x7ff6ee4e39b1: quartus + 0x39b1 (__scrt_common_main_seh + 0x105)
+	0x7ff9a262257c: KERNEL32 + 0x1257c (BaseThreadInitThunk + 0x1c)
+	0x7ff9a3fcaa67: ntdll + 0x5aa67 (RtlUserThreadStart + 0x27)
+</callstack>
+	<error>*** Fatal Error: Access Violation at 00007FF9632D49FC</error>
+	<date>Thu Oct  5 14:08:38 2023
+</date>
+	<version>Version 23.3.0 Build 104 09/20/2023 SC Pro Edition</version>
+</internal_error>

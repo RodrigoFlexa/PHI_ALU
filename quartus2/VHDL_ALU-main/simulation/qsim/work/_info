@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Demop\OneDrive\Documentos\Sexto_Semestre\PHI\quartus2\VHDL_ALU-main\simulation\qsim
+valu
+Z1 !s100 ]gjgJ?bcfHd`ekQ_GMUec1
+Z2 I:^I52>=?i^moM?VC7h9<A3
+Z3 V_Pz:PVaI2G@aTza]lM;HG3
+Z4 dC:\Users\Demop\OneDrive\Documentos\Sexto_Semestre\PHI\quartus2\VHDL_ALU-main\simulation\qsim
+Z5 w1696526478
+Z6 8alu.vo
+Z7 Falu.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|alu.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1696526478.398000
+Z12 !s107 alu.vo|
+!s101 -O0
+valu_vlg_check_tst
+!i10b 1
+Z13 !s100 Kj_CkMk]:LkOb65olm12B2
+Z14 IC[zDfebdFLdaXDg2KgJE]1
+Z15 VM;m]?9IR?2K1Yn[ORY2LI0
+R4
+Z16 w1696526477
+Z17 8alu.vt
+Z18 Falu.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1696526478.429000
+Z20 !s107 alu.vt|
+Z21 !s90 -work|work|alu.vt|
+!s101 -O0
+R10
+valu_vlg_sample_tst
+!i10b 1
+Z22 !s100 _hibnG^a2;=MlcBAVREDZ1
+Z23 IS0Koz;[iFSSDdQo4P]:W;2
+Z24 Vn=R;_`Fl;BIoobRKII3Y03
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+valu_vlg_vec_tst
+!i10b 1
+!s100 Aa3?cANeM;n@DmYIY^^;A0
+IJU:jMU@nBH]K<c4Wca8F03
+Z25 VKh<<g<fN<83>nOE>KA>;A3
+R4
+R16
+R17
+R18
+Z26 L0 263
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

@@ -1,0 +1,35 @@
+5
+3		
+1(Soma)
+
+10
+7		
+2(Subtração)
+
+12 (EM BINÁRIO: 1100)
+3  (EM BINÁRIO: 0011)	
+3(AND)
+
+5 (EM BINÁRIO: 0101)
+3 (EM BINÁRIO: 0011)
+4 (OR)
+
+7 (0111)
+0
+5(NOT A)
+
+6 (0110)
+2
+6(SLL A)
+
+12 (1100)
+3
+7(SRL A)
+
+8
+0
+8(INC A)
+
+8
+0
+9(DEC A)

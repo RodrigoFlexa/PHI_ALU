@@ -1,0 +1,318 @@
+|alu
+A[0] => soma:inst_soma.op_a[0]
+A[0] => subtracao:inst_sub.op_a[0]
+A[0] => and_gate:inst_and.op_a[0]
+A[0] => or_gate:inst_or.op_a[0]
+A[0] => not_gate:inst_not.op_a[0]
+A[0] => shift_esquerda:inst_esq.op_a[0]
+A[0] => shift_direita:inst_dir.op_a[0]
+A[0] => incremento:inst_inc.op_a[0]
+A[0] => decremento:inst_dec.op_a[0]
+A[1] => soma:inst_soma.op_a[1]
+A[1] => subtracao:inst_sub.op_a[1]
+A[1] => and_gate:inst_and.op_a[1]
+A[1] => or_gate:inst_or.op_a[1]
+A[1] => not_gate:inst_not.op_a[1]
+A[1] => shift_esquerda:inst_esq.op_a[1]
+A[1] => shift_direita:inst_dir.op_a[1]
+A[1] => incremento:inst_inc.op_a[1]
+A[1] => decremento:inst_dec.op_a[1]
+A[2] => soma:inst_soma.op_a[2]
+A[2] => subtracao:inst_sub.op_a[2]
+A[2] => and_gate:inst_and.op_a[2]
+A[2] => or_gate:inst_or.op_a[2]
+A[2] => not_gate:inst_not.op_a[2]
+A[2] => shift_esquerda:inst_esq.op_a[2]
+A[2] => shift_direita:inst_dir.op_a[2]
+A[2] => incremento:inst_inc.op_a[2]
+A[2] => decremento:inst_dec.op_a[2]
+A[3] => soma:inst_soma.op_a[3]
+A[3] => subtracao:inst_sub.op_a[3]
+A[3] => and_gate:inst_and.op_a[3]
+A[3] => or_gate:inst_or.op_a[3]
+A[3] => not_gate:inst_not.op_a[3]
+A[3] => shift_esquerda:inst_esq.op_a[3]
+A[3] => shift_direita:inst_dir.op_a[3]
+A[3] => incremento:inst_inc.op_a[3]
+A[3] => decremento:inst_dec.op_a[3]
+B[0] => soma:inst_soma.op_b[0]
+B[0] => subtracao:inst_sub.op_b[0]
+B[0] => and_gate:inst_and.op_b[0]
+B[0] => or_gate:inst_or.op_b[0]
+B[0] => not_gate:inst_not.op_b[0]
+B[0] => shift_esquerda:inst_esq.op_b[0]
+B[0] => shift_direita:inst_dir.op_b[0]
+B[0] => incremento:inst_inc.op_b[0]
+B[0] => decremento:inst_dec.op_b[0]
+B[1] => soma:inst_soma.op_b[1]
+B[1] => subtracao:inst_sub.op_b[1]
+B[1] => and_gate:inst_and.op_b[1]
+B[1] => or_gate:inst_or.op_b[1]
+B[1] => not_gate:inst_not.op_b[1]
+B[1] => shift_esquerda:inst_esq.op_b[1]
+B[1] => shift_direita:inst_dir.op_b[1]
+B[1] => incremento:inst_inc.op_b[1]
+B[1] => decremento:inst_dec.op_b[1]
+B[2] => soma:inst_soma.op_b[2]
+B[2] => subtracao:inst_sub.op_b[2]
+B[2] => and_gate:inst_and.op_b[2]
+B[2] => or_gate:inst_or.op_b[2]
+B[2] => not_gate:inst_not.op_b[2]
+B[2] => shift_esquerda:inst_esq.op_b[2]
+B[2] => shift_direita:inst_dir.op_b[2]
+B[2] => incremento:inst_inc.op_b[2]
+B[2] => decremento:inst_dec.op_b[2]
+B[3] => soma:inst_soma.op_b[3]
+B[3] => subtracao:inst_sub.op_b[3]
+B[3] => and_gate:inst_and.op_b[3]
+B[3] => or_gate:inst_or.op_b[3]
+B[3] => not_gate:inst_not.op_b[3]
+B[3] => shift_esquerda:inst_esq.op_b[3]
+B[3] => shift_direita:inst_dir.op_b[3]
+B[3] => incremento:inst_inc.op_b[3]
+B[3] => decremento:inst_dec.op_b[3]
+sel[0] => mux:inst_mux.sel[0]
+sel[1] => mux:inst_mux.sel[1]
+sel[2] => mux:inst_mux.sel[2]
+sel[3] => mux:inst_mux.sel[3]
+display_7_seg[0] <= display:inst_display.HEX0[0]
+display_7_seg[1] <= display:inst_display.HEX0[1]
+display_7_seg[2] <= display:inst_display.HEX0[2]
+display_7_seg[3] <= display:inst_display.HEX0[3]
+display_7_seg[4] <= display:inst_display.HEX0[4]
+display_7_seg[5] <= display:inst_display.HEX0[5]
+display_7_seg[6] <= display:inst_display.HEX0[6]
+
+
+|alu|soma:inst_soma
+op_a[0] => Add0.IN4
+op_a[1] => Add0.IN3
+op_a[2] => Add0.IN2
+op_a[3] => Add0.IN1
+op_b[0] => Add0.IN8
+op_b[1] => Add0.IN7
+op_b[2] => Add0.IN6
+op_b[3] => Add0.IN5
+resultado[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|subtracao:inst_sub
+op_a[0] => Add0.IN8
+op_a[1] => Add0.IN7
+op_a[2] => Add0.IN6
+op_a[3] => Add0.IN5
+op_b[0] => Add0.IN4
+op_b[1] => Add0.IN3
+op_b[2] => Add0.IN2
+op_b[3] => Add0.IN1
+resultado[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|and_gate:inst_and
+op_a[0] => resultado.IN0
+op_a[1] => resultado.IN0
+op_a[2] => resultado.IN0
+op_a[3] => resultado.IN0
+op_b[0] => resultado.IN1
+op_b[1] => resultado.IN1
+op_b[2] => resultado.IN1
+op_b[3] => resultado.IN1
+resultado[0] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|or_gate:inst_or
+op_a[0] => resultado.IN0
+op_a[1] => resultado.IN0
+op_a[2] => resultado.IN0
+op_a[3] => resultado.IN0
+op_b[0] => resultado.IN1
+op_b[1] => resultado.IN1
+op_b[2] => resultado.IN1
+op_b[3] => resultado.IN1
+resultado[0] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= resultado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|not_gate:inst_not
+op_a[0] => resultado[0].DATAIN
+op_a[1] => resultado[1].DATAIN
+op_a[2] => resultado[2].DATAIN
+op_a[3] => resultado[3].DATAIN
+op_b[0] => ~NO_FANOUT~
+op_b[1] => ~NO_FANOUT~
+op_b[2] => ~NO_FANOUT~
+op_b[3] => ~NO_FANOUT~
+resultado[0] <= op_a[0].DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= op_a[1].DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= op_a[2].DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= op_a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|shift_esquerda:inst_esq
+op_a[0] => resultado[1].DATAIN
+op_a[1] => resultado[2].DATAIN
+op_a[2] => resultado[3].DATAIN
+op_a[3] => ~NO_FANOUT~
+op_b[0] => ~NO_FANOUT~
+op_b[1] => ~NO_FANOUT~
+op_b[2] => ~NO_FANOUT~
+op_b[3] => ~NO_FANOUT~
+resultado[0] <= <GND>
+resultado[1] <= op_a[0].DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= op_a[1].DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= op_a[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|shift_direita:inst_dir
+op_a[0] => ~NO_FANOUT~
+op_a[1] => resultado[0].DATAIN
+op_a[2] => resultado[1].DATAIN
+op_a[3] => resultado[2].DATAIN
+op_b[0] => ~NO_FANOUT~
+op_b[1] => ~NO_FANOUT~
+op_b[2] => ~NO_FANOUT~
+op_b[3] => ~NO_FANOUT~
+resultado[0] <= op_a[1].DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= op_a[2].DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= op_a[3].DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= <GND>
+
+
+|alu|incremento:inst_inc
+op_a[0] => Add0.IN8
+op_a[1] => Add0.IN7
+op_a[2] => Add0.IN6
+op_a[3] => Add0.IN5
+op_b[0] => ~NO_FANOUT~
+op_b[1] => ~NO_FANOUT~
+op_b[2] => ~NO_FANOUT~
+op_b[3] => ~NO_FANOUT~
+resultado[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|decremento:inst_dec
+op_a[0] => Add0.IN8
+op_a[1] => Add0.IN7
+op_a[2] => Add0.IN6
+op_a[3] => Add0.IN5
+op_b[0] => ~NO_FANOUT~
+op_b[1] => ~NO_FANOUT~
+op_b[2] => ~NO_FANOUT~
+op_b[3] => ~NO_FANOUT~
+resultado[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+resultado[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|mux:inst_mux
+c[0] => Mux3.IN7
+c[1] => Mux2.IN7
+c[2] => Mux1.IN7
+c[3] => Mux0.IN7
+d[0] => Mux3.IN8
+d[1] => Mux2.IN8
+d[2] => Mux1.IN8
+d[3] => Mux0.IN8
+e[0] => Mux3.IN9
+e[1] => Mux2.IN9
+e[2] => Mux1.IN9
+e[3] => Mux0.IN9
+f[0] => Mux3.IN10
+f[1] => Mux2.IN10
+f[2] => Mux1.IN10
+f[3] => Mux0.IN10
+g[0] => Mux3.IN11
+g[1] => Mux2.IN11
+g[2] => Mux1.IN11
+g[3] => Mux0.IN11
+h[0] => Mux3.IN12
+h[1] => Mux2.IN12
+h[2] => Mux1.IN12
+h[3] => Mux0.IN12
+i[0] => Mux3.IN13
+i[1] => Mux2.IN13
+i[2] => Mux1.IN13
+i[3] => Mux0.IN13
+j[0] => Mux3.IN14
+j[1] => Mux2.IN14
+j[2] => Mux1.IN14
+j[3] => Mux0.IN14
+k[0] => Mux3.IN15
+k[1] => Mux2.IN15
+k[2] => Mux1.IN15
+k[3] => Mux0.IN15
+sel[0] => Mux0.IN19
+sel[0] => Mux1.IN19
+sel[0] => Mux2.IN19
+sel[0] => Mux3.IN19
+sel[1] => Mux0.IN18
+sel[1] => Mux1.IN18
+sel[1] => Mux2.IN18
+sel[1] => Mux3.IN18
+sel[2] => Mux0.IN17
+sel[2] => Mux1.IN17
+sel[2] => Mux2.IN17
+sel[2] => Mux3.IN17
+sel[3] => Mux0.IN16
+sel[3] => Mux1.IN16
+sel[3] => Mux2.IN16
+sel[3] => Mux3.IN16
+mux_out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|display:inst_display
+saida_mux[0] => Mux0.IN19
+saida_mux[0] => Mux1.IN19
+saida_mux[0] => Mux2.IN19
+saida_mux[0] => Mux3.IN19
+saida_mux[0] => Mux4.IN19
+saida_mux[0] => Mux5.IN19
+saida_mux[0] => Mux6.IN19
+saida_mux[1] => Mux0.IN18
+saida_mux[1] => Mux1.IN18
+saida_mux[1] => Mux2.IN18
+saida_mux[1] => Mux3.IN18
+saida_mux[1] => Mux4.IN18
+saida_mux[1] => Mux5.IN18
+saida_mux[1] => Mux6.IN18
+saida_mux[2] => Mux0.IN17
+saida_mux[2] => Mux1.IN17
+saida_mux[2] => Mux2.IN17
+saida_mux[2] => Mux3.IN17
+saida_mux[2] => Mux4.IN17
+saida_mux[2] => Mux5.IN17
+saida_mux[2] => Mux6.IN17
+saida_mux[3] => Mux0.IN16
+saida_mux[3] => Mux1.IN16
+saida_mux[3] => Mux2.IN16
+saida_mux[3] => Mux3.IN16
+saida_mux[3] => Mux4.IN16
+saida_mux[3] => Mux5.IN16
+saida_mux[3] => Mux6.IN16
+HEX0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,101 @@
+C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/or_gate.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/or_gate.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity or_gate
+-- Compiling architecture comportamento of or_gate
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/and_gate.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/and_gate.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate
+-- Compiling architecture comportamento of and_gate
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/subtracao.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/subtracao.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity subtracao
+-- Compiling architecture comportamento of subtracao
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/incremento.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/incremento.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity incremento
+-- Compiling architecture comportamento of incremento
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/not_gate.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/not_gate.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity not_gate
+-- Compiling architecture comportamento of not_gate
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/alu.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/alu.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity alu
+-- Compiling architecture rtl of alu
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/mux.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/mux.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux
+-- Compiling architecture Behavioral of mux
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/decremento.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/decremento.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity decremento
+-- Compiling architecture comportamento of decremento
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/shift_esquerda.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/shift_esquerda.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shift_esquerda
+-- Compiling architecture comportamento of shift_esquerda
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/shift_direita.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/shift_direita.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shift_direita
+-- Compiling architecture comportamento of shift_direita
+
+} {} {}} C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/soma.vhd {1 {vcom -work work -2002 -explicit C:/Users/Demop/OneDrive/Documentos/projetos_fpga/alu/soma.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity soma
+-- Compiling architecture comportamento of soma
+
+} {} {}}
